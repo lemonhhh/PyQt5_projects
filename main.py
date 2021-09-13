@@ -1,21 +1,15 @@
-
-
-from PyQt5.Qt import *
 import sys
+from PyQt5.QtWidgets import QApplication, QWidget
 
 
+if __name__ == '__main__':
 
-app = QApplication(sys.argv)
+    app = QApplication(sys.argv)
 
-window = QWidget()
+    w = QWidget()
+    w.resize(250, 150)
+    w.move(300, 300)
+    w.setWindowTitle('Simple')
+    w.show()
 
-window.setWindowTitle("QLabel的学习")
-window.resize(500,500)
-
-label = QLabel(window)
-label.setText("xxx")
-
-window.show()
-sys.exit(app.exec_())
-
-
+    sys.exit(app.exec_())

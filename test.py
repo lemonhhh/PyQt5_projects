@@ -1,11 +1,15 @@
+def hello1():
+    print("1")
 
-#0。导入需要的包和模块
-from PyQt5.Qt import *
-import sys
-from menu import Window
+def hello2():
+    print("2")
 
-app = QApplication(sys.argv)
-window = Window()
-window.show()
 
-sys.exit(app.exec_())
+def hello3():
+    print("3")
+
+if __name__ == '__main__':
+    hello1()
+    hello2()
+    hello3()
+
