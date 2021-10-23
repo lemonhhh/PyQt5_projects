@@ -1,1 +1,0 @@
-([('main', '/Users/liumenghan/毕设/学习/projects/dist/main', 'EXECUTABLE')],)

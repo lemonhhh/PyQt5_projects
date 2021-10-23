@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="register">
+    <file>images/back.jpg</file>
+    <file>images/flower.png</file>
+  </qresource>
+</RCC>
