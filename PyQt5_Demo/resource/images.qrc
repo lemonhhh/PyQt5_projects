@@ -3,4 +3,12 @@
     <file>images/back.jpg</file>
     <file>images/flower.png</file>
   </qresource>
+  <qresource prefix="login">
+    <file>images/e.gif</file>
+    <file>images/faguo.png</file>
+    <file>images/deguo.png</file>
+    <file>images/login_arrow.png</file>
+    <file>images/login_btn_icon.png</file>
+    <file>images/login_erwei.png</file>
+  </qresource>
 </RCC>

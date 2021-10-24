@@ -185,8 +185,8 @@ color:white;
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>360</x>
-     <y>200</y>
+     <x>170</x>
+     <y>140</y>
      <width>211</width>
      <height>223</height>
     </rect>
@@ -208,12 +208,15 @@ font: 13pt &quot;STHeiti&quot;;</string>
      </widget>
     </item>
     <item row="0" column="1">
-     <widget class="QLineEdit" name="lineEdit">
+     <widget class="QLineEdit" name="account_le">
       <property name="minimumSize">
        <size>
         <width>0</width>
         <height>30</height>
        </size>
+      </property>
+      <property name="clearButtonEnabled">
+       <bool>true</bool>
       </property>
      </widget>
     </item>
@@ -230,12 +233,15 @@ font: 13pt &quot;STHeiti&quot;;</string>
      </widget>
     </item>
     <item row="1" column="1">
-     <widget class="QLineEdit" name="lineEdit_2">
+     <widget class="QLineEdit" name="passward_le">
       <property name="minimumSize">
        <size>
         <width>0</width>
         <height>30</height>
        </size>
+      </property>
+      <property name="clearButtonEnabled">
+       <bool>true</bool>
       </property>
      </widget>
     </item>
@@ -252,17 +258,23 @@ font: 13pt &quot;STHeiti&quot;;</string>
      </widget>
     </item>
     <item row="2" column="1">
-     <widget class="QLineEdit" name="lineEdit_3">
+     <widget class="QLineEdit" name="confirm_pwd_le">
       <property name="minimumSize">
        <size>
         <width>0</width>
         <height>30</height>
        </size>
       </property>
+      <property name="clearButtonEnabled">
+       <bool>true</bool>
+      </property>
      </widget>
     </item>
     <item row="3" column="0" colspan="2">
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="register_button">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
       <property name="minimumSize">
        <size>
         <width>0</width>
@@ -279,7 +291,13 @@ QPushButton:hover{
 background-color: rgb(165, 177, 194);
 border-radius:40px;
 }
-</string>
+
+
+QPushButton:dissabled{
+background-color:rgb(241, 242, 246) ;
+border-radius:40px;
+}
+font: 13pt &quot;.AppleSystemUIFont&quot;;</string>
       </property>
       <property name="text">
        <string>注册</string>
@@ -363,7 +381,7 @@ border-radius:40px;
    </hints>
   </connection>
   <connection>
-   <sender>pushButton</sender>
+   <sender>register_button</sender>
    <signal>clicked()</signal>
    <receiver>Form</receiver>
    <slot>check_register()</slot>
@@ -378,6 +396,54 @@ border-radius:40px;
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>account_le</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>Form</receiver>
+   <slot>enable_register_btn()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>494</x>
+     <y>206</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>452</x>
+     <y>110</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>passward_le</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>Form</receiver>
+   <slot>enable_register_btn()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>447</x>
+     <y>264</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>250</x>
+     <y>258</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>confirm_pwd_le</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>Form</receiver>
+   <slot>enable_register_btn()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>454</x>
+     <y>314</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>231</x>
+     <y>311</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>show_hide_menu()</slot>
@@ -387,5 +453,6 @@ border-radius:40px;
   <slot>slot2()</slot>
   <slot>chongzhi_fun()</slot>
   <slot>check_register()</slot>
+  <slot>enable_register_btn()</slot>
  </slots>
 </ui>

@@ -10,6 +10,8 @@ class Window(QWidget):
 
 
     def setup_ui(self):
+        mb = QMessageBox(QMessageBox.Warning,"窗口标题","<h2>主标题</h2>",QMessageBox.Ok | QMessageBox.Discard,self)
+        mb.open()
         
 
 if __name__ == '__main__':
